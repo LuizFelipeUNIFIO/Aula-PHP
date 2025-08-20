@@ -1,0 +1,21 @@
+<?php
+    $nota = 10;
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura condicional</title>
+</head>
+<body>
+    <?php 
+        if($nota >= 7) {
+            echo ("<p>Aluno aprovado ✅</p>");
+        } else {
+            echo ("<p>Aluno reprovado ❌</p>");
+        }
+    ?>
+</body>
+</html>
