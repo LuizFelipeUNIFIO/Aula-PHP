@@ -9,7 +9,7 @@
 <body>
     <?php include "cabecalho.php";?>
     <main>
-        <h1>Teste Main</h1>
+        <h1>Conteúdo principal da página</h1>
     </main>
     <?php include "rodape.php";?>
 </body>

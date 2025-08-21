@@ -1,3 +1,3 @@
 <footer>
-    <h1>Teste Rodapé</h1>
+    <h1>“Desenvolvido em 2025</h1>
 </footer>
