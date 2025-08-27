@@ -1,6 +1,11 @@
 <?php
-    $nomeFilme = $_POST["nomeFilme"];
-    $genenoFilme = $_POST["generoFilme"];
+    if($_SERVER['REQUEST_METHOD'] == "POST") {
+        $nomeFilme = $_POST["nomeFilme"];
+        $genenoFilme = $_POST["generoFilme"];
+    } else {
+        $nomeFilme = "";
+        $genenoFilme = "";
+    }
     $imagemCadastro = "./imagemCadastro.jpg";
 ?>
 
@@ -34,14 +39,20 @@
             <input type="text" name="generoFilme" id="">
             <button>Enviar</button>
         </form>
-        <p>Filme Cadastrado: <?php echo ($nomeFilme) , " (", ($genenoFilme), ")"?></p>
-        <?php if($genenoFilme == "terror") {
+        <?php 
+            if($nomeFilme == "" || $genenoFilme == "") {
+                echo "<p>Filme Cadastrado:</p>";
+            } else {
+                echo "<p>Filme Cadastrado: $nomeFilme ($genenoFilme)</p>";
+            }
+            
+             if($genenoFilme == "terror") {
             echo "<p>Gênero de filme que mais assusta as pessoas!</p>";
             } elseif($genenoFilme == "comédia") {
             echo "<p>Gênero de filme que mais diverte as pessoas!</p>";
             } elseif($genenoFilme == "ação") {
             echo "<p>Gênero de filme que mais empolga as pessoas!</p>";
-            }   
+            }
         ?>
     </main>
     <?php include "rodape.php";?>
